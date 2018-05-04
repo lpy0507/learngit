@@ -1,0 +1,64 @@
+一、安装Git→Git Bash启动Git命令窗口→设置用户名称和邮箱地址
+
+    $ git config --global user.name "Your Name"
+    $ git config --global user.email "email address"
+
+二、创建版本库
+
+    1.创建一个目录或者用自己已有的目录
+    2.右键该目录，打开Git Bash，输入git init初始化一个仓库
+    3.在该目录下新建一个xxx.txt文件，输入命令git add xxx.txt(必须带后缀)；
+    4.输入命令：git commit -m"提交内容"，提交该文件到仓库；
+
+三、
+
+   1.输入命令：git status查看该文件的状态，若有红色 modify字眼，表示该文件内容改变但是没有add到仓库，若是绿色，表示已经add，但是没有commit；
+   2.命令：git diff xxx.txt查看改动内容；
+   3.提交文件流程：git add xxx.txt → git commit -m"改动说明"
+   4.git log查看历史记录，git log --pretty=oneline使每条记录只占一行；
+   5.版本回退：git log查看历史记录，然后输入命令：git reset --hard HARD~n(n代表从新到老的第几个版本)；
+     或者输入：git reset --hard xxxxx(版本号)，可以指定到某个版本；
+   6.git reflog可以查看之前输入过的命令，并附带每个版本的版本号，可以用来reset任何一个版本；
+
+四、工作区、暂存区、分支
+   
+   1.添加、修改文件，在工作区；
+   2.git add 文件，会把文件添加到stage暂存区；
+   3.git commit 文件，会把stage暂存区的所有文件添加到分支
+
+   4.git checkout -- file 可以撤销工作区的修改(只是工作区当前的修改)；
+   5.git reset HEAD file可以在误操作git add后回退到当前修改之前的版本；
+
+五、出现Unable to create 'E:/xxx/.git/index.lock': File exists.异常
+   
+   在.git的同级目录打开Git Bash执行：rm -f .git/index.lock
+
+六、删除和撤销删除
+
+   1.git rm file删除一个文件；
+   2.git checkout -- file 撤销删除/git reset --hard HEAD也有同样的效果；
+
+七、添加、切换分支
+
+  1.git checkout -b dev;等同于下面两个命令的合体
+  2.git branch dev;git checkout dev;
+
+八、"name"是分支的名字
+    1.查看分支：git branch
+    2.创建分支:git branch name;
+    3.切换分支：git checkout name;
+    4.创建+切换分支：git checkout -b name;
+    5.合并某分支到当前分支：git merge name;
+    6.删除分支：git branch -d name;
+
+九、1.git log：查看提交记录；
+    2.git log --pretty=oneline:记录一行展示；
+    3.git log --graph --pretty=oneline:图表展示分支合并情况(展示版本号全部内容)；
+    4.git log --graph --pretty=oneline --abbrev-commit:图表展示分支合并情况(展示版本号前6位);
+
+十、分支管理
+
+    1.git merge --no-ff -m"" dev:表示禁用Fast Forward,
+      即普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
+
+
