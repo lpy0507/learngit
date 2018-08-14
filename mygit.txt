@@ -33,10 +33,11 @@
    
    在.git的同级目录打开Git Bash执行：rm -f .git/index.lock
 
-六、删除和撤销删除
+六、删除和撤销删除和克隆
 
    1.git rm file删除一个文件；
    2.git checkout -- file 撤销删除/git reset --hard HEAD也有同样的效果；
+   3.git clone git@github.com:lpy0507/gitClone.git(前提是github上创建库时勾选Initialize this repository with a README)
 
 七、添加、切换分支
 
