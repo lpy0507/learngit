@@ -41,7 +41,7 @@
 
 七、添加、切换分支
 
-  1.git checkout -b dev;等同于下面两个命令的合体
+  1.git checkout -b dev;等同于下面两个命令的合体:创建并切换分支
   2.git branch dev;git checkout dev;
 
 八、"name"是分支的名字
