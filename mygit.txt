@@ -113,5 +113,23 @@
        git push origin --tags：推送全部尚未推送的标签到远程
        git push origin :refs/tags/v1.0：删除远程标签，前提是先删除本地标签
 
+十五、远程库
+   
+       git remote rm origin：删除已有的远程库
+       git remote add origin git@gitee.com:liaoxuefeng/learngit.git：码云添加远程库的操作
+    添加多个远程库：
+       git remote add github git@github.com:lpy0507/MyGit.git
+       git remote add gitee git@gitee.com:lpy0507/MyGitee.git
+    这里分别用github和gitee代替了之前的origin
+
+十六、配置别名
+
+      git config --global alias.co checkout：把checkout缩写成co
+      git config --global alias.ci commit：把commit缩写成ci
+      ...
+      git config --global alias.rtH 'reset HEAD'
+    eg:git rtH test.txt =git reset HEAD test.txt
+    丧心病狂:git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
 
 
