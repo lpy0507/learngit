@@ -10,7 +10,7 @@
     3.在该目录下新建一个xxx.txt文件，输入命令git add xxx.txt(必须带后缀)；
     4.输入命令：git commit -m"提交内容"，提交该文件到仓库；
 
-三、
+三、版本回退
 
    1.输入命令：git status查看该文件的状态，若有红色 modify字眼，表示该文件内容改变但是没有add到仓库，若是绿色，表示已经add，但是没有commit；
    2.命令：git diff xxx.txt查看改动内容；
@@ -56,7 +56,9 @@
     3.git log --graph --pretty=oneline:图表展示分支合并情况(展示版本号全部内容)；
     4.git log --graph --pretty=oneline --abbrev-commit:图表展示分支合并情况(展示版本号前6位);
 
-十一、git add -A .来一次添加所有改变的文件。注意 -A 选项后面还有一个句点。 
+九、add的几种方式
+
+      git add -A .来一次添加所有改变的文件。注意 -A 选项后面还有一个句点。 
    
       git add -A表示添加所有内容， 
   
@@ -64,7 +66,9 @@
  
       git add -u 表示添加编辑或者删除的文件，不包括新添加的文件。
 
-十二、git remote add origin https://github.com/lpy0507/Git.git
+十、添加远程仓库、推送
+      
+      git remote add origin https://github.com/lpy0507/Git.git
 
       git remote add origin git@github.com:lpy0507/Git.git
 
