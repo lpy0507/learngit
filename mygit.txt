@@ -72,6 +72,6 @@
 
       git remote add origin git@github.com:lpy0507/Git.git
 
-      git push -u origin master 第一次需要添加-u建立链接，之后就不用加了
+      git push -u origin master 第一次需要添加-u建立连接，之后就不用加了
 
 
