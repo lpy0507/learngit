@@ -39,28 +39,26 @@
    2.git checkout -- file 撤销删除/git reset --hard HEAD也有同样的效果；
    3.git clone git@github.com:lpy0507/gitClone.git(前提是github上创建库时勾选Initialize this repository with a README)
 
-七、添加、切换分支
+七、分支:"name"是分支的名字
 
   1.git checkout -b dev;等同于下面两个命令的合体:创建并切换分支
-  2.git branch dev;git checkout dev;
+  2.git branch dev;创建分支
+  3.git checkout dev;切换分支
+  4.git branch;查看当前是哪个分支
+  5.git merge name;合并某分支到当前分支
+  6.git branch -d name;删除分支
+  7.git merge --no-ff -m"" dev:表示禁用Fast Forward,
+      即普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
 
-八、"name"是分支的名字
-    1.查看分支：git branch
-    2.创建分支:git branch name;
-    3.切换分支：git checkout name;
-    4.创建+切换分支：git checkout -b name;
-    5.合并某分支到当前分支：git merge name;
-    6.删除分支：git branch -d name;
-
-九、1.git log：查看提交记录；
+八、提交记录Log
+    1.git log：查看提交记录；
     2.git log --pretty=oneline:记录一行展示；
     3.git log --graph --pretty=oneline:图表展示分支合并情况(展示版本号全部内容)；
     4.git log --graph --pretty=oneline --abbrev-commit:图表展示分支合并情况(展示版本号前6位);
 
 十、分支管理
 
-    1.git merge --no-ff -m"" dev:表示禁用Fast Forward,
-      即普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。
+    1.
 
 十一、git add -A .来一次添加所有改变的文件。注意 -A 选项后面还有一个句点。 
    
