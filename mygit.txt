@@ -56,10 +56,6 @@
     3.git log --graph --pretty=oneline:图表展示分支合并情况(展示版本号全部内容)；
     4.git log --graph --pretty=oneline --abbrev-commit:图表展示分支合并情况(展示版本号前6位);
 
-十、分支管理
-
-    1.
-
 十一、git add -A .来一次添加所有改变的文件。注意 -A 选项后面还有一个句点。 
    
       git add -A表示添加所有内容， 
